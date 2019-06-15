@@ -1,0 +1,19 @@
+for POST request:-
+
+curl --request POST --url http://0.0.0.0:8000/api/version/songs/ --form file3=@/home/palash/Pictures/Screenshot from 2018-12-15 14-13-16.png 
+--form title=title_postman11 --form artist=artist_postman11
+
+for  PUT request :-
+curl --request PUT --url http://0.0.0.0:8000/songs/api/versions/11 --form title=title_postman11 
+--form artist=artist_postman11
+
+for DELETE request :-
+
+curl -X DELETE  -m 10 -d title=Imtheone -d artist=djkhaled 0.0.0.0:8000/songs/api/version/11
+
+
+Note:-
+When implementing DELETE request using curl -m 10 set the max time limit read the man page for the curl for furthur
+clarification .It give "COnnection reset error "  see the :-link for more details:-
+
+http://www-01.ibm.com/support/docview.wss?uid=swg21295765
